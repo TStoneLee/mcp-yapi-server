@@ -2,6 +2,8 @@
 
 [![npm version](https://img.shields.io/npm/v/mcp-yapi-server.svg)](https://www.npmjs.com/package/mcp-yapi-server)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub stars](https://img.shields.io/github/stars/TStoneLee/mcp-yapi-server.svg)](https://github.com/TStoneLee/mcp-yapi-server/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/TStoneLee/mcp-yapi-server.svg)](https://github.com/TStoneLee/mcp-yapi-server/network)
 
 基于 [Model Context Protocol (MCP)](https://modelcontextprotocol.io) 的 YApi 集成服务器，在 Cursor 等支持 MCP 的编辑器中直接查询 YApi API 文档。
 

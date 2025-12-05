@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "yapi": {
+      "command": "node",
+      "args": [
+        "/path/to/mcp-yapi-server/dist/index.js"
+      ],
+      "env": {
+        "YAPI_BASE_URL": "https://yapi.example.com",
+        "YAPI_TOKEN": "your_yapi_token_here"
+      }
+    }
+  }
+}
+

@@ -1,0 +1,62 @@
+{
+  "name": "mcp-yapi-server",
+  "version": "1.0.0",
+  "description": "MCP server for accessing YApi service - Query YApi API documentation directly in Cursor and other MCP-compatible editors",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "mcp-yapi-server": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "docs",
+    "examples",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "prebuild": "npm run clean",
+    "postbuild": "chmod +x dist/index.js && echo 'Build completed successfully'",
+    "prepublishOnly": "npm run build",
+    "inspector": "npx @modelcontextprotocol/inspector node dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "yapi",
+    "api-documentation",
+    "typescript",
+    "server",
+    "cursor",
+    "ai",
+    "api-client"
+  ],
+  "author": "xilull",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/mcp-yapi-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/mcp-yapi-server/issues"
+  },
+  "homepage": "https://github.com/your-username/mcp-yapi-server#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.24.3",
+    "axios": "^1.6.0",
+    "zod": "^4.1.13"
+  },
+  "devDependencies": {
+    "@types/node": "^20.5.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.1.6"
+  }
+}

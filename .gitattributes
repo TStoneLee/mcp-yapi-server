@@ -1,0 +1,6 @@
+# 确保行尾一致
+* text=auto eol=lf
+
+# 脚本文件应该是可执行的
+*.sh text eol=lf
+

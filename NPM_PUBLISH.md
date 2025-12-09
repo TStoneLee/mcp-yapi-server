@@ -101,16 +101,14 @@ mcp-yapi-server --help
 {
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/mcp-yapi-server.git"
+    "url": "https://github.com/TStoneLee/mcp-yapi-server.git"
   },
   "bugs": {
-    "url": "https://github.com/your-username/mcp-yapi-server/issues"
+    "url": "https://github.com/TStoneLee/mcp-yapi-server/issues"
   },
-  "homepage": "https://github.com/your-username/mcp-yapi-server#readme"
+  "homepage": "https://github.com/TStoneLee/mcp-yapi-server#readme"
 }
 ```
-
-将 `your-username` 替换为你的 GitHub 用户名。
 
 ## 🔄 后续更新
 

@@ -102,7 +102,7 @@ https://yapi.example.com/project/100/interface/api/12345
 
 ```bash
 # 克隆项目
-git clone https://github.com/your-username/mcp-yapi-server.git
+git clone https://github.com/TStoneLee/mcp-yapi-server.git
 cd mcp-yapi-server
 
 # 安装依赖

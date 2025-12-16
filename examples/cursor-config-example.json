@@ -1,15 +1,33 @@
 {
   "mcpServers": {
     "yapi": {
+      "_comment": "推荐方式: 本地安装后使用",
       "command": "node",
+      "args": ["./node_modules/mcp-yapi-server/dist/index.js"],
+      "env": {
+        "YAPI_BASE_URL": "https://yapi.example.com",
+        "YAPI_TOKEN": "your_token_here"
+      }
+    },
+    "yapi-global": {
+      "_comment": "全局安装方式 (npm install -g mcp-yapi-server)",
+      "command": "mcp-yapi-server",
+      "env": {
+        "YAPI_BASE_URL": "https://yapi.example.com",
+        "YAPI_TOKEN": "your_token_here"
+      }
+    },
+    "yapi-npx": {
+      "_comment": "⚠️ 不推荐: npx 方式可能有依赖解析问题",
+      "command": "npx",
       "args": [
-        "/path/to/mcp-yapi-server/dist/index.js"
+        "-y",
+        "mcp-yapi-server@latest"
       ],
       "env": {
         "YAPI_BASE_URL": "https://yapi.example.com",
-        "YAPI_TOKEN": "your_yapi_token_here"
+        "YAPI_TOKEN": "your_token_here"
       }
     }
   }
 }
-

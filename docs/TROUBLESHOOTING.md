@@ -54,7 +54,55 @@ npm run build
    curl "https://yapi.example.com/api/interface/get?id=12345&token=你的token"
    ```
 
-### 3. 工具未显示
+### 3. "Cannot find module '@modelcontextprotocol/sdk/server/mcp.js'" 错误
+
+**原因**: 使用 npx 时依赖解析问题
+
+**解决**: 使用本地安装或全局安装
+
+**推荐方式 - 本地安装**:
+```bash
+# 在项目目录中
+npm install mcp-yapi-server
+```
+
+```json
+{
+  "mcpServers": {
+    "yapi": {
+      "command": "node",
+      "args": ["./node_modules/mcp-yapi-server/dist/index.js"],
+      "env": {
+        "YAPI_BASE_URL": "https://yapi.example.com",
+        "YAPI_TOKEN": "your_token"
+      }
+    }
+  }
+}
+```
+
+**或全局安装**:
+```bash
+npm install -g mcp-yapi-server
+```
+
+```json
+{
+  "mcpServers": {
+    "yapi": {
+      "command": "mcp-yapi-server",
+      "env": {
+        "YAPI_BASE_URL": "https://yapi.example.com",
+        "YAPI_TOKEN": "your_token"
+      }
+    }
+  }
+}
+```
+
+> ⚠️ **不推荐使用 npx**，因为依赖可能无法正确解析。
+
+### 4. 工具未显示
 
 **检查**:
 ```bash
@@ -73,7 +121,7 @@ npm run build
 
 **然后**: 重启 Cursor
 
-### 4. 连接失败
+### 5. 连接失败
 
 **检查网络**:
 ```bash
@@ -84,7 +132,7 @@ curl https://yapi.example.com
 - 确认 `YAPI_BASE_URL` 正确
 - 确认能访问 YApi 服务器
 
-### 5. Token 问题
+### 6. Token 问题
 
 **Token 无效**:
 - 重新登录 YApi 获取新 token
@@ -114,12 +162,14 @@ curl https://yapi.example.com
 - [ ] Cursor 配置路径正确
 - [ ] YAPI_TOKEN 已设置(如需要)
 - [ ] 已重启 Cursor
+- [ ] **使用本地安装或全局安装，而不是 npx**
 
 ## 💡 90% 的问题通过以下解决
 
 1. 升级 Node.js 到 18+
 2. 配置正确的 YAPI_TOKEN
-3. 重启 Cursor
+3. **使用本地安装而不是 npx**
+4. 重启 Cursor
 
 ---
 

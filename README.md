@@ -39,21 +39,12 @@ npm install -g mcp-yapi-server
 
 在 Cursor 设置中添加 MCP 服务器配置：
 
-```json
-{
-  "mcpServers": {
-    "yapi": {
-      "command": "mcp-yapi-server",
-      "env": {
-        "YAPI_BASE_URL": "https://yapi.example.com",
-        "YAPI_TOKEN": "your_token_here"
-      }
-    }
-  }
-}
-```
+**推荐方式 - 本地安装：**
 
-**或使用本地安装：**
+```bash
+# 在项目目录中安装
+npm install mcp-yapi-server
+```
 
 ```json
 {
@@ -69,6 +60,28 @@ npm install -g mcp-yapi-server
   }
 }
 ```
+
+**或全局安装：**
+
+```bash
+npm install -g mcp-yapi-server
+```
+
+```json
+{
+  "mcpServers": {
+    "yapi": {
+      "command": "mcp-yapi-server",
+      "env": {
+        "YAPI_BASE_URL": "https://yapi.example.com",
+        "YAPI_TOKEN": "your_token_here"
+      }
+    }
+  }
+}
+```
+
+> ⚠️ **注意**: 不推荐使用 `npx` 方式，因为依赖可能无法正确解析。请使用本地安装或全局安装。
 
 ### 3. 重启 Cursor
 
